@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensioners Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pensioners Management System</h1>
+        </header>
+
+        <main>
+            <div class="grid-container" id="gridContainer">
+                <!-- Grid items will be dynamically generated -->
+            </div>
+
+            <div class="pagination-container">
+                <button id="prevBtn" class="pagination-btn">Previous</button>
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <!-- Page numbers will be dynamically generated -->
+                </div>
+                <button id="nextBtn" class="pagination-btn">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for adding/editing content -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Content</h2>
+            <form id="contentForm">
+                <div class="form-group">
+                    <label for="videoLink">Video Link:</label>
+                    <input type="url" id="videoLink" placeholder="Enter video URL">
+                </div>
+
+                <div class="form-group">
+                    <label for="videoName">Video Name:</label>
+                    <input type="text" id="videoName" placeholder="Enter video name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="videoDescription">Video Description:</label>
+                    <textarea id="videoDescription" placeholder="Enter video description" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="uploadDate">Upload Date:</label>
+                    <input type="date" id="uploadDate" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="photoUpload">Upload Photos:</label>
+                    <input type="file" id="photoUpload" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="documentUpload">Upload Documents:</label>
+                    <input type="file" id="documentUpload" accept=".pdf,.doc,.docx,.txt" multiple>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Save</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
